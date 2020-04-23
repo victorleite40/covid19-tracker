@@ -1,5 +1,9 @@
 export const allCountries = [
-    { Country: "Rwanda", Slug: "rwanda", ISO2: "RW" },
+    { 
+    Country: "Rwanda", 
+    Slug: "rwanda", 
+    ISO2: "RW" 
+    },
     {
     Country: "Tajikistan",
     Slug: "tajikistan",
