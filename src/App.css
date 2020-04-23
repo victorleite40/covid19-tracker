@@ -32,10 +32,3 @@ h1 {
   font-size: 22px;
   margin-bottom: 10px;
 }
-
-div.dashboard {
-  display: grid;
-  grid-template-columns: 300px 1fr 1fr 1fr 1fr;
-  grid-gap: 25px;
-  margin: 25px;
-}

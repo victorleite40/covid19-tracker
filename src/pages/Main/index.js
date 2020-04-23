@@ -1,14 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import apiCovid from '../../services/api';
 
-import Propragacao from '../../components/Propragacao'
 import Header from '../../components/Header/Header'
+import Ranking from '../../components/Ranking/Ranking'
 
 import './styles.css';
 
 export default function Main() {
     const [summary, setSummary] = useState([]);
     
+    /**
+     * GET GLOBAL SUMMARY
+     */
     useEffect(() =>{
         async function loadGlobalSummary() {
             const response = await apiCovid.get('/summary')
@@ -17,11 +20,14 @@ export default function Main() {
         }
         loadGlobalSummary();
     }, []);
-
+    
+    /**
+     * RENDER
+     */
     return (
         <>
         <Header />
-        <div className="dashboard">
+        <div className="dashboardGlobal">
             <div className="globalSummary">
                 <h1>Sumário Global</h1>
                 <strong>Total de Casos Confirmados</strong> <p> {summary.TotalConfirmed} </p>
@@ -42,9 +48,9 @@ export default function Main() {
                         <p> <strong>Casos Fatais</strong> </p>
                     </li>
                 </div>
-            </div>
 
-            <Propragacao />
+            </div>
+            <Ranking />
         </div>
         </>
     );

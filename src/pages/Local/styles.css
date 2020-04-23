@@ -1,0 +1,38 @@
+div.dashboardLocal {
+    display: grid;
+    grid-template-columns: 300px 1fr 1fr 1fr 1fr;
+    grid-gap: 25px;
+    margin: 25px;
+  }
+  
+  @media (max-width: 1240px) {
+    div.dashboardLocal {
+      grid-template-columns: 300px 1fr 1fr;
+      grid-gap: 25px;
+      margin: 25px;
+    }
+  }
+
+div.virusSpreadChart {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+div.nowActiveChart {
+    grid-column-start: 4;
+    grid-column-end: 6;
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+@media (max-width: 1240px) { 
+    div.nowActiveChart {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}

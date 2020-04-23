@@ -9,7 +9,7 @@ export default function Routes() {
         <BrowserRouter>
             <Switch>
                 <Route path="/" exact component={Main} />
-                <Route path="/local/:country" exact component={Local}  children={<Local />} />
+                <Route path="/:country" exact component={Local}  children={<Local />} />
             </Switch>
         </BrowserRouter>
     );

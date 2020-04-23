@@ -1,0 +1,59 @@
+.ranking {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+@media (max-width: 840px) {
+    .ranking {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+}
+
+.ranking > div {
+    overflow-x: hidden; 
+    overflow-x: auto;
+    height: 92%;
+}
+.ranking table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ranking table th button img {
+    float: right;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+.ranking table td, .ranking table th {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+}
+  
+.ranking table tr.item {
+    text-decoration: none;
+}
+
+.ranking table tr.item:hover {
+    background-color: #ddd;
+    /* cursor: pointer; */
+}
+  
+.ranking table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+.ranking table th button {
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
