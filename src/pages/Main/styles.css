@@ -1,0 +1,44 @@
+div.globalSummary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
+
+div.globalSummary > strong {
+    font-size: 15px;
+}
+
+div.globalSummary > p  {
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+div.globalDetails {
+    margin-top: 20px;
+}
+
+div.globalDetails li {
+    margin-top: 20px;
+}
+
+.dataGlobal, .new {
+    float: right;
+}
+
+.new {
+    background: #eeeeee;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-size: 11px;
+    color: #5f5f5f;
+    padding: 2px 4px;
+}
+
+div.virusSpreadChart {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+}
