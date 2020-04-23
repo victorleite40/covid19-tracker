@@ -8,8 +8,8 @@ export default function Routes() {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" exact component={Main} />
-                <Route path="/:country" exact component={Local}  children={<Local />} />
+                <Route path="/covid19-tracker/" exact component={Main} />
+                <Route path="/covid19-tracker/:country" exact component={Local}  children={<Local />} />
             </Switch>
         </BrowserRouter>
     );
