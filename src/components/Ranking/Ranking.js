@@ -6,7 +6,7 @@ import arrowUp from '../../assets/arrow-up.svg'
 import arrowDown from '../../assets/arrow-down.svg'
 import './styles.css';
 
-export default function Header() {
+export default function Header(props) {
     const [regions, setRegions] = useState([]);
 
     const [sort, setSort] = useState('confirmed'); // Sort variable; Confirmed cases by default
@@ -38,16 +38,16 @@ export default function Header() {
      * RENDER
      */
     return (
-        <div className="ranking">
+        <div className={"ranking" + props.page}>
             <h1>Global Ranking</h1>
 
             <div>
                 <table>
                     <tr>
-                        <th><button onClick={() => handleSort('')} >Region <img src={(sort==='') ? arrowRot : "" } /> </button></th>
-                        <th><button onClick={() => handleSort('confirmed')} >Confirmed <img src={(sort==='confirmed') ? ((arrowRot) ? "" : arrowDown) : ((sort==='confirmedr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
-                        <th><button onClick={() => handleSort('recovered')} >Recovered <img src={(sort==='recovered') ? ((arrowRot) ? "" : arrowDown) : ((sort==='recoveredr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
-                        <th><button onClick={() => handleSort('fatal')} >Fatal <img src={(sort==='fatal') ? ((arrowRot) ? "" : arrowDown) : ((sort==='fatalr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
+                        <th><button onClick={() => handleSort('')} >Region <img alt="" src={(sort==='') ? arrowRot : "" } /> </button></th>
+                        <th><button onClick={() => handleSort('confirmed')} >Confirmed <img alt="" src={(sort==='confirmed') ? ((arrowRot) ? "" : arrowDown) : ((sort==='confirmedr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
+                        <th><button onClick={() => handleSort('recovered')} >Recovered <img alt="" src={(sort==='recovered') ? ((arrowRot) ? "" : arrowDown) : ((sort==='recoveredr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
+                        <th><button onClick={() => handleSort('fatal')} >Fatal <img alt="" src={(sort==='fatal') ? ((arrowRot) ? "" : arrowDown) : ((sort==='fatalr') ? (arrowRot) ? arrowUp : "" : "")} /> </button></th>
                     </tr>
                     {regions
                         .filter(region => region.TotalConfirmed>0) // Render only if there are at least 1 case confirmed
@@ -60,15 +60,15 @@ export default function Header() {
                                 case 'fatal': return b.TotalDeaths-a.TotalDeaths
                                 case 'fatalr': return a.TotalDeaths-b.TotalDeaths
                                 default:
-                                    break;
+                                    return '';
                             }
                         })
                         .map(region => ( // Maps
                             <tr className="item" key={region.Country} >
                                 <td>{region.Country}</td>
-                                <td>{region.TotalConfirmed}</td>
-                                <td>{region.TotalRecovered}</td>
-                                <td>{region.TotalDeaths}</td>
+                                <td style={{ color: "#a83f2f" }} >{region.TotalConfirmed}</td>
+                                <td style={{ color: "#45a82f" }} >{region.TotalRecovered}</td>
+                                <td style={{ color: "#333" }} >{region.TotalDeaths}</td>
                             </tr>
                         ))
                     }

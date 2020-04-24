@@ -1,6 +1,7 @@
 div.dashboardLocal {
     display: grid;
     grid-template-columns: 300px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 275px 275px 275px;
     grid-gap: 25px;
     margin: 25px;
   }
@@ -8,6 +9,7 @@ div.dashboardLocal {
   @media (max-width: 1240px) {
     div.dashboardLocal {
       grid-template-columns: 300px 1fr 1fr;
+      grid-template-rows: 275px 275px 275px 275px;
       grid-gap: 25px;
       margin: 25px;
     }

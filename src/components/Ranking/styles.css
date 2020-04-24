@@ -1,4 +1,7 @@
-.ranking {
+/**
+* MAIN PAGE
+*/
+.rankingMain {
     background: #fff;
     padding: 20px;
     border-radius: 7px;
@@ -8,7 +11,7 @@
     grid-row-end: 3;
 }
 @media (max-width: 840px) {
-    .ranking {
+    .rankingMain {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 2;
@@ -16,42 +19,106 @@
     }
 }
 
-.ranking > div {
+.rankingMain > div {
     overflow-x: hidden; 
     overflow-x: auto;
     height: 92%;
 }
-.ranking table {
+.rankingMain table {
     border-collapse: collapse;
     width: 100%;
 }
 
-.ranking table th button img {
+.rankingMain table th button img {
     float: right;
     margin-left: 5px;
     margin-top: 1px;
 }
-.ranking table td, .ranking table th {
+.rankingMain table td, .rankingMain table th {
     border-bottom: 1px solid #ddd;
     padding: 10px 15px;
 }
   
-.ranking table tr.item {
+.rankingMain table tr.item {
     text-decoration: none;
 }
 
-.ranking table tr.item:hover {
+.rankingMain table tr.item:hover {
     background-color: #ddd;
     /* cursor: pointer; */
 }
   
-.ranking table th {
+.rankingMain table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
 }
 
-.ranking table th button {
+.rankingMain table th button {
+    background: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+
+/**
+* LOCAL PAGE
+*/
+.rankingLocal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+@media (max-width: 1240px) {
+    .rankingLocal {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    }
+}
+
+.rankingLocal > div {
+    overflow-x: hidden; 
+    overflow-x: auto;
+    height: 92%;
+}
+.rankingLocal table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.rankingLocal table th button img {
+    float: right;
+    margin-left: 5px;
+    margin-top: 1px;
+}
+.rankingLocal table td, .rankingLocal table th {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 15px;
+}
+  
+.rankingLocal table tr.item {
+    text-decoration: none;
+}
+
+.rankingLocal table tr.item:hover {
+    background-color: #ddd;
+    /* cursor: pointer; */
+}
+  
+.rankingLocal table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+}
+
+.rankingLocal table th button {
     background: none;
     border: none;
     font-weight: 700;

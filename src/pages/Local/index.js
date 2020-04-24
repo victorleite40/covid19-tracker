@@ -6,6 +6,7 @@ import Propragacao from '../../components/Propragacao'
 import NowActive from '../../components/NowActive'
 
 import Header from '../../components/Header/Header'
+import Ranking from '../../components/Ranking/Ranking'
 
 import './styles.css';
 
@@ -35,7 +36,6 @@ export default function Main() {
 
             setSummary(response.data[response.data.length-lastRep])
             setPreviousSummary(response.data[(response.data.length-lastRep)-1])
-            
         }
 
         /**
@@ -116,6 +116,8 @@ export default function Main() {
 
             <Propragacao labelDate={date} confirmedData={confirmed} fatalData={fatal} />
             <NowActive labelDate={date} activeData={activeChart} />
+
+            <Ranking page={"Local"} />
         </div>
         </>
     );

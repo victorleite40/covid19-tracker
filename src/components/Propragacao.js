@@ -33,7 +33,7 @@ export default class Chart extends Component {
             ]
           }}
           width={100}
-          height={35}
+          height={33}
           options={
             { 
               maintainAspectRatio: true,

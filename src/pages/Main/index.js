@@ -50,7 +50,7 @@ export default function Main() {
                 </div>
 
             </div>
-            <Ranking />
+            <Ranking page={"Main"} />
         </div>
         </>
     );

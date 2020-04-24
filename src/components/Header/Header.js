@@ -26,7 +26,7 @@ export default function Header({ history }) {
                     if (value) return setCountry(value.Slug)
                 }}
             />
-            <Link to={country} > <button type="submit" className="btn">Search</button> </Link>
+            <Link to={`/covid19-tracker/${country}`} > <button type="submit" className="btn">Search</button> </Link>
         </div>
     );
 }
