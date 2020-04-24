@@ -1,12 +1,12 @@
 # Covid-19 Data Tracker
-<img src="https://imgur.com/nWMhHcL.jpg" />
+<img src="https://imgur.com/vGVrIRd.jpg" />
 
 ## About
 Application created to improve my skills on API Rest, ReactJS and ChatJS developing. The design was higly based on [Bing's Covid-19 Tracker](https://bing.com/covid/).
 
 ## API Used
 Public Coronavirus COVID19 API. 
-[Documentation](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)
+[See Documentation](https://documenter.getpostman.com/view/10808728/SzS8rjbc?version=latest)
 
 ## How To Run
 First you need to install all the packages:<br/>
