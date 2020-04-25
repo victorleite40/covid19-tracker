@@ -1,0 +1,19 @@
+.statsChartMain {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.statsChartLocal {
+    background: #fff;
+    padding: 20px;
+    border-radius: 7px;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
