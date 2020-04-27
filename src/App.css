@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+@import url("https://use.typekit.net/ebc2mpn.css");
 
 * {
   margin: 0;
@@ -12,14 +12,14 @@ html, body, #root {
 }
 
 body {
-  background: #f8f8f8;
+  background: #F9FAFC;
   /* background: #000 url('./assets/background.jpg') no-repeat;
   background-size: cover; */
   -webkit-font-smoothing: antialiased !important;
 }
 
 body, input, button {
-  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-family: 'Foco', Arial, Helvetica, sans-serif;
   font-size: 14px;
 }
 
@@ -29,6 +29,15 @@ li {
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 32px;
   margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-size: 22px;
 }
