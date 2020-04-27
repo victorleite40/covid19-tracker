@@ -1,5 +1,5 @@
 # Covid-19 Data Tracker
-<img src="https://imgur.com/vGVrIRd.jpg" />
+<img src="https://imgur.com/mHLfKuJ.jpg" />
 
 ## About
 Application created to improve my skills on API Rest, ReactJS and ChatJS developing. The design was higly based on [Bing's Covid-19 Tracker](https://bing.com/covid/).
@@ -11,7 +11,7 @@ Public Coronavirus COVID19 API.
 ## How To Run
 First you need to install all the packages:<br/>
 `yarn add axios`<br/>
-`yarn add react-router0dom`<br/>
+`yarn add react-router-dom`<br/>
 `yarn add react-chartjs-2 chart.js`<br/>
 `yarn add @material-ui/core`<br/>
 `yarn add @material-ui/lab`<br/>
