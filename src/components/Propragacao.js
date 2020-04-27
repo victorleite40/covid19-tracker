@@ -5,7 +5,7 @@ export default class Chart extends Component {
   render() {
     return (
       <div className="virusSpreadChart">
-        <h1>Gráfico de Propagação</h1>
+        <h2>Gráfico de Propagação</h2>
         <Line
           data={{
             labels: this.props.labelDate,

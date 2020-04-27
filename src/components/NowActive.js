@@ -5,7 +5,7 @@ export default class Chart extends Component {
   render() {
     return (
       <div className="nowActiveChart">
-        <h1>Casos Ativos Simultâneos</h1>
+        <h2>Casos Ativos Simultâneos</h2>
         <Line
           data={{
             labels: this.props.labelDate,

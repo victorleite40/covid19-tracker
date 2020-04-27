@@ -4,8 +4,8 @@ import { Bar } from 'react-chartjs-2';
 export default class Chart extends Component {
   render() {
     return (
-      <div className="nowActiveChart">
-        <h1>Daily Cases</h1>
+      <div className="dailyChart">
+        <h2>Daily Cases</h2>
         <Bar
           data={{
             labels: this.props.labelDate,

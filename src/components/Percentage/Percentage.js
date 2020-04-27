@@ -28,7 +28,7 @@ export default function Header(props) {
      */
     return (
         <div className={"percentage" + props.page}>
-            <h1>Global Statistics</h1>
+            <h2>Global Statistics</h2>
             <div className="globalStats">
                     <li>
                         <p style={{ color: "#a83f2f" }} className="dataStats" > { active.toFixed(2) + "%" } </p>

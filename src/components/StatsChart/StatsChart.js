@@ -14,7 +14,7 @@ export default class Chart extends Component {
   render() {
     return (
       <div className={"statsChart" + this.props.page} >
-        <h1>{this.props.title + " Statistics (%)" }</h1>
+        <h2>{this.props.title + " Statistics (%)" }</h2>
 		<Doughnut width={100} height={77} 
 			data={{
 				labels: [
@@ -25,14 +25,14 @@ export default class Chart extends Component {
 				datasets: [{
 					data: [this.props.activeStats , this.props.recoveredStats, this.props.fatalStats],
 					backgroundColor: [
-						'#eb6363',
-						'#8aeb63',
-						'#757575'
+						'#EEAF1E',
+						'#5AC923',
+						'#575757'
 					],
 					hoverBackgroundColor: [
-						'#eb6363',
-						'#8aeb63',
-						'#757575'
+						'#EEAF1E',
+						'#5AC923',
+						'#575757'
 					]
 				}]
 			}} 

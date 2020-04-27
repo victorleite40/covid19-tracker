@@ -39,7 +39,7 @@ export default function Header(props) {
      */
     return (
         <div className={"ranking" + props.page}>
-            <h1>Global Ranking</h1>
+            <h2>Global Ranking</h2>
 
             <div>
                 <table>
