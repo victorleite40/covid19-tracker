@@ -113,37 +113,38 @@ export default function Main() {
     return (
         <>
         <Header />
-        <div className="dashboardLocal">
-            <div className="globalSummary">
-                <h1> {summary.Country + " Summary"} </h1>
-                <strong>Total Confirmed Cases</strong> <p> {summary.Confirmed} </p>
-                <div className="globalDetails">
+        <div className="content">
+            <h1> {summary.Country + " Statistics"} </h1>
+            <div className="dashboardLocal">
+                <div className="localSummary">
+                    {/* <strong>Total Confirmed Cases</strong> <p> {summary.Confirmed} </p> */}
                     <li>
-                        <p className="new" > {(newActive>0) ? "+ " + newActive : "- " + (newActive-newActive*2)} </p>
-                        <p className="dataGlobal" > {nowActive} </p>
                         <p> <strong>Active Cases</strong> </p>
+                        <h3 style={{color: '#EEAF1E'}} className="dataLocal" > {nowActive} </h3>
+                        <p className="newLocal" > {(newActive>0) ? "+ " + newActive : "- " + (newActive-newActive*2)} </p>
                     </li>
                     <li>
-                        <p className="new" > + {summary.Recovered-previousSummary.Recovered} </p>
-                        <p className="dataGlobal" > {summary.Recovered} </p> 
                         <p> <strong>Recovered Cases</strong> </p>
+                        <h3 style={{color: '#5AC923'}} className="dataLocal" > {summary.Recovered} </h3> 
+                        <p className="newLocal" > + {summary.Recovered-previousSummary.Recovered} </p>
                     </li>
                     <li>
-                        <p className="new" > + {summary.Deaths - previousSummary.Deaths} </p>
-                        <p className="dataGlobal" > {summary.Deaths} </p> 
                         <p> <strong>Fatal Cases</strong> </p>
+                        <h3 style={{color: '#575757'}} className="dataLocal" > {summary.Deaths} </h3> 
+                        <p className="newLocal" > + {summary.Deaths - previousSummary.Deaths} </p>
                     </li>
                 </div>
+
+                <div className="subGridLocal">
+                    <StatsChart title={summary.Country} page={"Local"} activeStats={activeStats.toFixed(2)} recoveredStats={recoveredStats.toFixed(2)} fatalStats={fatalStats.toFixed(2)} />
+                </div>
+
+                <Propragacao labelDate={date} confirmedData={confirmed} fatalData={fatal} />
+                <NowActive labelDate={date} activeData={activeChart} />
+
+                <Ranking page={"Local"} />
+                <DailyData labelDate={date} recovered={dailyRecovered} fatal={dailyFatal} />
             </div>
-
-            <Propragacao labelDate={date} confirmedData={confirmed} fatalData={fatal} />
-            <NowActive labelDate={date} activeData={activeChart} />
-
-            <Ranking page={"Local"} />
-
-            <StatsChart title={summary.Country} page={"Local"} activeStats={activeStats.toFixed(2)} recoveredStats={recoveredStats.toFixed(2)} fatalStats={fatalStats.toFixed(2)} />
-
-            <DailyData labelDate={date} recovered={dailyRecovered} fatal={dailyFatal} />
         </div>
         </>
     );
