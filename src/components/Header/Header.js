@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
@@ -21,7 +21,7 @@ export default function Header({ history }) {
                 options={allCountries}
                 getOptionLabel={(option) => option.Country}
                 style={{ width: 300, marginLeft: 50 }}
-                renderInput={(params) => <TextField {...params} label="Filtrar por região" variant="outlined" />}
+                renderInput={(params) => <TextField {...params} label="Filter by region" variant="outlined" />}
                 onChange={(event, value) => {
                     if (value) return setCountry(value.Slug)
                 }}

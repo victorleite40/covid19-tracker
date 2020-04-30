@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import apiCovid from '../../services/api';
-import { Link } from 'react-router-dom';
 
 import arrowUp from '../../assets/arrow-up.svg'
 import arrowDown from '../../assets/arrow-down.svg'
@@ -69,7 +68,6 @@ export default function Header(props) {
                                 <td style={{ color: "#a83f2f" }} >{region.TotalConfirmed}</td>
                                 <td style={{ color: "#45a82f" }} >{region.TotalRecovered}</td>
                                 <td style={{ color: "#333" }} >{region.TotalDeaths}</td>
-                                {console.log(region.Country + ", " + region.TotalConfirmed + ", " + region.TotalRecovered + ", " + region.TotalDeaths)}
                             </tr>
                         ))
                     }

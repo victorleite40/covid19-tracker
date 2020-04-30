@@ -4,12 +4,13 @@ import apiCovid from '../services/api';
 
 import { Line } from 'react-chartjs-2';
 
-export default function NowActive() {
+export default function SpreadChart() {
     const [date, setDate] = useState([]);
     const { country } = useParams();
-    
-    const [activeChart, setActiveChart] = useState([]);
 
+    const [confirmed, setConfirmed] = useState([]);
+    const [fatal, setFatal] = useState([]);
+    
     /**
      * GET DATA
      */
@@ -18,15 +19,18 @@ export default function NowActive() {
             const response = await apiCovid.get(`/total/country/${country}`);
             
             const labelDate = []
-            const activeChartData = []
+
+            const confirmedData = []
+            const fatalData = []
 
             for (let i=0; i<response.data.length; i+=5) {
                 // Ignores if there are 0 cases confirmed
-                if (response.data[i].Confirmed!==0) {
+                if (response.data[i].Confirmed!==0) {                    
                     labelDate.push(response.data[i].Date.slice(0, 10));
 
-                    // Now Active Chart
-                    activeChartData.push(response.data[i].Confirmed-response.data[i].Recovered-response.data[i].Deaths);
+                    // Spread Chart
+                    confirmedData.push(response.data[i].Confirmed);
+                    fatalData.push(response.data[i].Deaths);
                 } 
             }
 
@@ -35,34 +39,46 @@ export default function NowActive() {
 
             // Pushes the last report
             labelDate.push(response.data[response.data.length-lastRep].Date.slice(0, 10));
-            
-            activeChartData.push(response.data[response.data.length-lastRep].Confirmed-response.data[response.data.length-lastRep].Recovered-response.data[response.data.length-lastRep].Deaths);
+
+            confirmedData.push(response.data[response.data.length-lastRep].Confirmed);
+            fatalData.push(response.data[response.data.length-lastRep].Deaths);
 
             setDate(labelDate)
-            setActiveChart(activeChartData)
+            setConfirmed(confirmedData)
+            setFatal(fatalData)
         }
         loadCountryTotalData();
     }, [country]);
-    
+
     /**
      * RENDER
      */
     return (
-      <div className="nowActiveChart">
-        <h2>Simultaneously Active Cases</h2>
+      <div className="virusSpreadChart">
+        <h2>Gráfico de Propagação</h2>
         <Line
           data={{
             labels: date,
             datasets: [
               {
-                label: 'Active Cases',
+                label: 'Confirmados',
                 fill: false,
                 backgroundColor: 'rgba(255, 255, 255, 1)',
-                borderColor: 'rgba(209, 148, 25,1)',
+                borderColor: 'rgba(227, 34, 34,1)',
                 borderWidth: 1,
-                hoverBackgroundColor: 'rgba(209, 148, 25,1)',
-                hoverBorderColor: 'rgba(209, 148, 25,1)',
-                data: activeChart
+                hoverBackgroundColor: 'rgba(227, 34, 34,1)',
+                hoverBorderColor: 'rgba(227, 34, 34,1)',
+                data: confirmed
+              },
+              {
+                label: 'Fatais',
+                fill: false,
+                backgroundColor: 'rgba(255, 255, 255, 1)',
+                borderColor: 'rgba(55,55,55,1)',
+                borderWidth: 1,
+                hoverBackgroundColor: 'rgba(75,75,75,1)',
+                hoverBorderColor: 'rgba(75,75,75,1)',
+                data: fatal
               }
             ]
           }}

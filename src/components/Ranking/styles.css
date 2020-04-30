@@ -76,12 +76,12 @@
     grid-row-end: 7;
     box-shadow: 0px 1px 8px #0000000D;
 }
-@media (max-width: 1240px) {
+@media (max-width: 1480px) {
     .rankingLocal {
-        /* grid-column-start: 1;
-        grid-column-end: 3;
-        grid-row-start: 3;
-        grid-row-end: 5; */
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 10;
+        grid-row-end: 13; 
     }
 }
 
