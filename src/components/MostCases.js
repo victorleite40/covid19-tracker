@@ -16,9 +16,9 @@ export default function MostCases() {
             const response = await apiCovid.get(`/total/country/${country}`);
             
             for (let i=0; i<response.data.length; i++) {
-                if (i>2) {
+                if (i>1) {
                     let newRecovered = response.data[i].Recovered - response.data[i-1].Recovered;
-                    let previousNewRecovered = response.data[i-1].Recovered - response.data[i-2].Recovered;
+                    
                     if (newRecovered>hiRecovered) {
                         setHiRecovered(newRecovered)
                     }
