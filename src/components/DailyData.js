@@ -26,7 +26,7 @@ export default function DailyData() {
 
             for (let i=0; i<response.data.length; i+=3) {
                 // Ignores if there are 0 cases confirmed
-                if (response.data[i].Deaths>0 && i>0) {
+                if (response.data[i].Deaths>0 && i>0 && response.data[i].Recovered>0) {
                     labelDate.push(response.data[i].Date.slice(0, 10));
 
                     // Daily Data Chart

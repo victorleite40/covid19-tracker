@@ -25,6 +25,7 @@ div.globalSummary {
     background: #fff;
     padding: 20px;
     border-radius: 7px;
+    box-shadow: 0px 1px 8px #0000000D;
 }
 
 div.globalSummary > strong {
@@ -37,12 +38,8 @@ div.globalSummary > p  {
     margin-top: 10px;
 }
 
-div.globalDetails {
-    margin-top: 20px;
-}
-
 div.globalDetails li {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .dataGlobal, .new {
