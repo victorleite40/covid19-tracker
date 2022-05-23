@@ -13,14 +13,14 @@ Public Coronavirus COVID19 API.
 ## How To Run
 First you need to install all the packages:<br/>
 ```
-$ yarn add axios
-$ yarn add react-router-dom
-$ yarn add react-chartjs-2 chart.js
-$ yarn add @material-ui/core
-$ yarn add @material-ui/lab
+yarn
+```
+or
+```
+npm install
 ```
 
-Then you can run the app in the development mode with `yarn start`.<br/>
+After it finishes you'll be able to run the app in the development mode with `yarn start`.<br/>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 <br/>
 The page will reload if you make edits.
